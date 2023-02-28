@@ -1,0 +1,80 @@
+.products{
+    
+
+    &__wrapper{
+        width: min(100%, 1100px);
+        margin: auto;
+        padding: 20px 10px;
+
+        &__title{
+            margin: 0 auto 20px;
+            width: fit-content;
+
+            h2{
+                font-size: 2.5rem;
+            }
+
+            p{
+                text-align: center;
+                color: #808080;
+            }
+        }
+
+        .swiper{
+            padding: 30px 0;
+        }
+        
+
+        .card{
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 20px ;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            cursor: pointer;
+
+            img{
+                width: min(100%, 60px);
+                display: block;
+                margin: auto;
+
+                @media screen and (max-width:720px){
+                        width: min(100%, 40px);
+                }  
+            }
+
+            .image{
+                background: #f7f7f7;
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .product-name{
+                font-weight: 500;
+                color: #121212;
+            }
+            
+            p{
+                font-size: .9rem;
+                color: #808080;
+                font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        .inspired{
+            img{
+                width: min(100%, 200px);
+            }
+
+            p{
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+        }
+    }
+
+}

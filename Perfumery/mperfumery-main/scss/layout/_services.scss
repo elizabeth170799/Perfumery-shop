@@ -1,0 +1,44 @@
+.services{
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        width: min(100%, 1100px);
+        margin: auto;
+        padding: 20px 10px;
+
+        
+
+        &__card{
+            width: min(100%, 500px);
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            i{
+                font-size: clamp(1.8rem, 0.925rem + 2.8vw, 2.5rem);
+            }
+            
+            span{
+                font-family: 'Poppins', serif;
+                font-weight: 600;
+                font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+            }
+
+            p{
+                color: #808080;
+                line-height: 25px;
+                font-size: clamp(0.875rem, 0.7188rem + 0.5vw, 1rem);
+            }
+
+        }
+
+        
+
+        @media only screen and (max-width:720px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

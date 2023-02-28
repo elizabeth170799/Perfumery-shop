@@ -1,0 +1,111 @@
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    &.sticky{
+        background: #fff;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition: .3s ease-in-out;
+    }
+    
+
+    .nav{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        width: min(100%, 1200px);
+        margin: auto;
+        padding: 15px 10px;
+        
+
+        &__menu, &__shop{
+            display: none;
+            font-size: 1.5rem;
+            align-items: center;
+        }
+    
+        &__logo span{
+            font-family: 'Rufina', sans-serif;
+            font-size: 1.75rem;
+            white-space: nowrap;
+        }
+    
+        &__links{
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            
+            &__close{
+                display: none;
+                font-size: 1.5rem;
+            }
+
+            ul{
+                display: flex;
+                gap: 2.5rem;
+                list-style: none;
+            }
+    
+            a{
+                color: #121212;
+            }
+
+            &__cta{
+                border: 2px solid;
+                padding:10px 25px ;
+                text-align: center;
+            }
+
+        }
+
+        @media only screen and (max-width:720px) {
+            justify-content: space-between;
+
+            &__links{
+                position: absolute;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: stretch;
+                gap: 2.5rem;
+                background: #fafafa;
+                top: 0;
+                left: -500px;
+                width: min(100%, 250px);
+                height: 100vh;
+                padding:10px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+                transition: .3s ease-in-out;
+
+                
+                &__close{
+                    display: block;
+                    font-size: 2rem;
+                    text-align: end;
+                }
+
+                &.active{
+                    left: 0;
+                }
+
+                ul{
+                    flex-direction: column;
+                    padding: 0;
+                }
+
+                .cta{
+                    border: none;
+                    padding: 0;
+                }
+            }
+
+            &__menu, &__shop{
+                display: flex;
+            }
+            
+        }
+    }
+}
